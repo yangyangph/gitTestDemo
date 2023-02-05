@@ -22,7 +22,7 @@ public class TabbarViewController: UITabBarController {
     }
 
     func initTabbarItems() {
-        let deviceMainVC = BaseNavigationController(rootViewController: LoginViewController())
+        let deviceMainVC = BaseNavigationController(rootViewController: DeviceViewController())
         let personalVC = BaseNavigationController(rootViewController: PersonalSettingViewController())
         let img = Tabbar.Asset.tabbarDeviceIconUnSelect.image
         let selectImg = Tabbar.Asset.tabbarDeviceIconSelect.image

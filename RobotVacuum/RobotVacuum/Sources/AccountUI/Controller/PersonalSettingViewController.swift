@@ -69,7 +69,16 @@ public class PersonalSettingViewController: BaseViewController {
         logoutAlert.buttonTapBlock = { [self] type in
             setAlertViewHideStatus(status: true)
             if type == .confirm {
-               
+                UserDefaults.standard.setValue("", forKey: hadLaunchedApp)
+                UserDefaults.standard.synchronize()
+                DispatchQueue.main.async {
+//                    NotificationCenter.default.addObserver(self, selector: #selector(switchRootVCNotification(_:)),
+//                                                           name: NSNotification.Name(rawValue: value), object: nil)
+                    let value = AccountUI.notificationNameSwitchRootVC
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: value), object: 1,userInfo: nil)
+                    
+                    
+                }
             }
         }
     }

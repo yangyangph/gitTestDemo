@@ -32,6 +32,7 @@ targets:
         CURRENT_PROJECT_VERSION: 1
         DEVELOPMENT_TEAM: E695D9MPGR
         PRODUCT_BUNDLE_IDENTIFIER: com.ubtrobot.robotvacuum
+        TARGETED_DEVICE_FAMILY: 1
 
     dependencies:
       - package: RobotVacuum
